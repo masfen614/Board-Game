@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* adds the margin and padding into actual size */
+}
+
+html{
+    --grid-size: 1;      /*  variable we can load the size into from js  */
+
+}
+
+main  {
+    display: grid;
+    /* repeat takes in 2 params - 1 is how many times to repeat,
+    2 is what are we repeating */
+
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    grid-template-rows: repeat(var(--grid-size), 1fr);
+    border: 3px solid black;
+    height: 80vh;
+    width: 80vw;
+}
+
+/* div:nth-child(even){
+    background-color: black;
+} */
+
+.black {
+    background-color: black;
+}
+
+div {
+    font-size: 48px;
+    text-align: center;
+}
+
